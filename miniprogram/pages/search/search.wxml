@@ -1,0 +1,90 @@
+<view class="page" data-weui-theme="{{theme}}" wx:if="{{page}}">
+    <view class="weui-cells__title" style="font-size:18px">挑战答题题库搜索</view>
+    <view class="weui-form-s">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <input class="weui-input" placeholder="多个关键字用空格隔开" value="{{search}}" bindinput="searchInput" bindtap="cancel"/>
+            </view>
+            <view class="weui-cell__ft" bindtap="goSearch" style="width:20%">
+                <a class="weui-btn weui-btn_mini weui-btn_primary">搜索</a>
+            </view>
+        </view>
+
+
+        <view class="weui-font" wx:for="{{textLists}}" wx:key="{{item.id}}" style=" border: 8px solid #f1f1f1;border-radius: 10rpx;padding: 10rpx;">
+<!--            <text>{{item.text}}</text>-->
+            <block wx:for="{{item.text}}" wx:key="*this"  wx:for-item="items">
+                <text wx:if="{{items.key == true}}" style="color:red;font-weight:bold;">{{items.str}}</text>
+                <text wx:else>{{items.str}}</text>
+            </block>
+
+        </view>
+
+
+        <view class="weui-form__extra-area">
+            <view class="weui-footer">
+                <view class="weui-footer__text">Copyright ©laughing</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+<view class="page2" data-weui-theme="{{theme}}" wx:if="{{page2}}">
+    <view class="weui-form">
+        <view class="weui-cells__title" style="font-size:18px;">学习强国</view>
+        <view class="weui-cells__group weui-cells__group_form">
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd" style="position: relative; margin-right: 10px;">
+                    <open-data type="userAvatarUrl"></open-data>
+                </view>
+                <view class="weui-cell__bd">
+                    <view style="font-size: 20px">
+                        <open-data type="userNickName" lang="zh_CN"></open-data>
+                    </view>
+                    <view style="font-size: 13px; color: #888;">欢迎登陆</view>
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_active" bindtap="mrtxxg">
+                <view class="weui-cell__bd">
+                    <text style="vertical-align: middle;">设置提醒时间</text>
+                </view>
+                <view class="weui-cell__ft">添加</view>
+            </view>
+
+
+        </view>
+
+        <view class="weui-form__extra-area">
+            <view class="weui-footer">
+                <view class="weui-footer__text">Copyright ©laughing</view>
+            </view>
+        </view>
+    </view>
+
+</view>
+
+
+<view class="page__bd" style="height: 100%;">
+    <view class="weui-tab">
+        <view class="weui-tab__panel">
+        </view>
+        <view class="weui-tabbar">
+
+            <view class="weui-tabbar__item " bindtap="gosearch">
+                <view style="display: inline-block; position: relative;">
+                    <image src="/images/A.png" alt class="weui-tabbar__icon"></image>
+                </view>
+                <view class="weui-tabbar__label">题库</view>
+            </view>
+
+            <view class="weui-tabbar__item " bindtap="gomy">
+                <image src="/images/B.png" alt class="weui-tabbar__icon"></image>
+                <view class="weui-tabbar__label">我的</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+

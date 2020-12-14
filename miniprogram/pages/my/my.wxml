@@ -1,0 +1,63 @@
+<view class="page2" data-weui-theme="{{theme}}">
+    <view class="weui-form">
+        <view class="weui-cells__title" style="font-size:18px;">学习强国</view>
+        <view class="weui-cells__group weui-cells__group_form">
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd" style="position: relative; margin-right: 10px;">
+                    <open-data type="userAvatarUrl"></open-data>
+                </view>
+                <view class="weui-cell__bd">
+                    <view style="font-size: 20px">
+                        <open-data type="userNickName" lang="zh_CN"></open-data>
+                    </view>
+                    <view style="font-size: 13px; color: #888;">欢迎登陆</view>
+                </view>
+            </view>
+
+            <view class="weui-cell weui-cell_active" bindtap="mrtxxg">
+                <view class="weui-cell__bd">
+                    <text style="vertical-align: middle;">设置提醒时间</text>
+                </view>
+                <view class="weui-cell__ft">添加</view>
+            </view>
+
+
+
+        </view>
+
+        <view class="weui-form__extra-area">
+            <view class="weui-footer">
+                <view class="weui-footer__text">Copyright ©laughing</view>
+            </view>
+        </view>
+    </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+<view class="page__bd" style="height: 100%;">
+		<view class="weui-tab">
+			<view class="weui-tab__panel">
+			</view>
+			<view class="weui-tabbar">
+				<view class="weui-tabbar__item " bindtap="gostudy">
+					<image src="/images/A.png" alt class="weui-tabbar__icon"></image>
+					<view class="weui-tabbar__label">题库</view>
+				</view>
+				<view class="weui-tabbar__item weui-bar__item_on" >
+					<view style="display: inline-block; position: relative;" >
+						<image src="/images/B.png" alt class="weui-tabbar__icon"></image>
+					</view>
+					<view class="weui-tabbar__label">我的</view>
+				</view>
+			</view>
+		</view>
+	</view>

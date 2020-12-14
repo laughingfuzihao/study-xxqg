@@ -1,0 +1,5 @@
+# Project exclude paths
+/cloudfunctions/getopenid/node_modules/
+/cloudfunctions/login/node_modules/
+/cloudfunctions/send/node_modules/
+/cloudfunctions/sends/node_modules/
