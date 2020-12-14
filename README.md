@@ -1,5 +1,5 @@
 # 强国提醒project
-
+![Image text](https://github.com/laughingfuzihao/study-xxqg/blob/master/miniprogram/images/1.jpg)
 
 
 ## 参考文档
